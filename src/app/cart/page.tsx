@@ -6,6 +6,17 @@ import Link from "next/link"
 import { Trash2, ArrowLeft, ShoppingCartIcon } from "lucide-react"
 import { motion } from "framer-motion"
 
+// -------------------------
+// Cart Item Type Definition
+// -------------------------
+interface CartItem {
+  id: string | number
+  name: string
+  price: number
+  qty: number
+  image?: string
+}
+
 export default function CartPage() {
   const { cart, remove, updateQty, total } = useCart()
   const router = useRouter()
@@ -55,7 +66,7 @@ export default function CartPage() {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-16">
           <div className="lg:col-span-2">
             <div className="space-y-4">
-              {cart.map((item) => (
+              {cart.map((item: CartItem) => (
                 <motion.div
                   key={item.id}
                   initial={{ opacity: 0, y: 20 }}
@@ -111,7 +122,9 @@ export default function CartPage() {
                   </div>
 
                   <div className="text-right flex-shrink-0 flex flex-col justify-center">
-                    <p className="text-lg font-semibold text-black">${(item.price * item.qty).toFixed(2)}</p>
+                    <p className="text-lg font-semibold text-black">
+                      ${(item.price * item.qty).toFixed(2)}
+                    </p>
                   </div>
                 </motion.div>
               ))}
