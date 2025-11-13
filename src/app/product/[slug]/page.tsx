@@ -88,7 +88,7 @@ export default async function ProductPage(props: any) {
               <p className="text-xs uppercase tracking-widest font-bold text-primary mb-4">{product.category.name}</p>
             )}
 
-            <h1 className="text-4xl lg:text-5xl font-bold tracking-tight mb-4 leading-tight text-balance">
+            <h1 className="text-3xl font-bold tracking-tight mb-4 leading-tight text-balance">
               {product.name}
             </h1>
 
@@ -141,3 +141,4 @@ export default async function ProductPage(props: any) {
     </main>
   )
 }
+
