@@ -14,8 +14,8 @@ const openSans = Open_Sans({
 })
 
 export const metadata: Metadata = {
-  title: "Studio - Premium Retail Experience",
-  description: "Discover exceptional products crafted for modern living",
+  title: "Headless WooCommerce Shop - By Brainbean",
+  description: "A high-performance headless commerce solution powered by WooCommerce REST APIs, delivering a modern frontend architecture with seamless product management, dynamic checkout flows, and scalable integration capabilities.",
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
